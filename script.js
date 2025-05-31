@@ -84,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   let isEditing = false, editingIndex = null;
+  // to remember filters when opening modal
+  let savedFilters = {};
 
   function renderTable(data) {
     tableBody.innerHTML = '';
@@ -166,6 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!entry._orig) {
         const editBtnRow = document.createElement('button'); editBtnRow.textContent = '編集';
         editBtnRow.addEventListener('click', () => {
+          // save current filter settings for edit
+          savedFilters = {
+            nameTerm: nameInput.value,
+            nameDropdown: nameDropdown.value,
+            ingTerm: ingInput.value,
+            ingDropdown: ingDropdown.value,
+            ticketChecked: ticketCheckbox.checked,
+            oteboValue: oteboDropdown.value
+          };
           isEditing = true; editingIndex = index; showModal();
           formName.value = entry.name; formName.dispatchEvent(new Event('change'));
           formIng.value = entry.ing; formAmount.value = entry.amount;
@@ -332,14 +343,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
      // clear input value
      formName.value = '';
-     formLevel.value = 30;
+     formLevel.value = 60;
      formIngPercent.value = '';
      formHelpSpeed.value = '';
      [formOtebo, formSpM, formSpS, formIngS, formIngM].forEach(cb => cb.checked = false);
-     formNature.value = 'sp_up';
+     formNature.value = '';
    }
    function hideModal() { modal.classList.add('hidden'); }
-   addBtn.addEventListener('click', () => { isEditing = false; editingIndex = null; showModal(); });
+   addBtn.addEventListener('click', () => {
+     // save current filter settings
+     savedFilters = {
+       nameTerm: nameInput.value,
+       nameDropdown: nameDropdown.value,
+       ingTerm: ingInput.value,
+       ingDropdown: ingDropdown.value,
+       ticketChecked: ticketCheckbox.checked,
+       oteboValue: oteboDropdown.value
+     };
+     isEditing = false; editingIndex = null; showModal();
+   });
    closeBtn.addEventListener('click', hideModal);
    modal.addEventListener('click', e => { if (e.target === modal) hideModal(); });
    saveBtn.addEventListener('click', () => {
@@ -369,11 +391,13 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('addedPokemon', JSON.stringify(addedData));
     // re-merge and refresh
     pokemonData = originalData.concat(addedData);
-    // clear search filters so the new entry appears
-    nameInput.value = '';
-    nameDropdown.value = '';
-    ingInput.value = '';
-    ingDropdown.value = '';
+    // restore saved filters
+    nameInput.value = savedFilters.nameTerm;
+    nameDropdown.value = savedFilters.nameDropdown;
+    ingInput.value = savedFilters.ingTerm;
+    ingDropdown.value = savedFilters.ingDropdown;
+    ticketCheckbox.checked = savedFilters.ticketChecked;
+    oteboDropdown.value = savedFilters.oteboValue;
      hideModal();
      applyFilter();
    });
