@@ -129,40 +129,49 @@ document.addEventListener('DOMContentLoaded', () => {
       const avgSwapCount = effPercent > 0 ? 100 / effPercent : 0;
       tdAvg.textContent = avgSwapCount.toFixed(2);
       tr.appendChild(tdAvg);
-      // append actual support speed: help_speed * (1 - (level-1)*0.002) * 0.45
-      const tdActual = document.createElement('td');
+      // compute raw actual support speed before modifiers
       const helpSpeed = parseFloat(entry.help_speed);
       const level = parseFloat(entry.level);
-      let actual = helpSpeed * (1 - (level - 1) * 0.002) * 0.45;
-      // apply キャンチケ discount if checked
-      if (ticketCheckbox && ticketCheckbox.checked) {
-        actual = actual / 1.2;
-      }
-      // apply combined modifiers: おてぼ count, おてぼ flag, スピM, スピS; cap multiplier at minimum 0.65
-      const oteboCount = oteboDropdown ? parseInt(oteboDropdown.value, 10) : 0;
-      const flagOtebo = entry.otebo ? 0.05 : 0;
-      const flagSpM = entry.spM ? 0.14 : 0;
-      const flagSpS = entry.spS ? 0.07 : 0;
-      let modSum = oteboCount * 0.05 + flagOtebo + flagSpM + flagSpS;
-      let multiplier = 1 - modSum;
-      if (multiplier < 0.65) multiplier = 0.65;
-      actual = actual * multiplier;
-      // apply nature modifier: スピ↑ or いじっぱり => x0.9
-      if (['sp_up', 'ijippari'].includes(entry.nature)) {
-        actual = actual * 0.9;
-      }
-      if (['hikaeme'].includes(entry.nature)) {
-        actual = actual * 1.075;
-      }
+      const rawActual = helpSpeed * (1 - (level - 1) * 0.002) * 0.45;
+      // apply modifiers to raw actual to get effective support speed
+      let actual = rawActual;
+       // apply キャンチケ discount if checked
+       if (ticketCheckbox && ticketCheckbox.checked) {
+         actual = actual / 1.2;
+       }
+       // apply combined modifiers: おてぼ count, おてぼ flag, スピM, スピS; cap multiplier at minimum 0.65
+       const oteboCount = oteboDropdown ? parseInt(oteboDropdown.value, 10) : 0;
+       const flagOtebo = entry.otebo ? 0.05 : 0;
+       const flagSpM = entry.spM ? 0.14 : 0;
+       const flagSpS = entry.spS ? 0.07 : 0;
+       let modSum = oteboCount * 0.05 + flagOtebo + flagSpM + flagSpS;
+       let multiplier = 1 - modSum;
+       if (multiplier < 0.65) multiplier = 0.65;
+       actual = actual * multiplier;
+       // apply nature modifier: スピ↑ or いじっぱり => x0.9
+       if (['sp_up', 'ijippari'].includes(entry.nature)) {
+         actual = actual * 0.9;
+       }
+       if (['hikaeme'].includes(entry.nature)) {
+         actual = actual * 1.075;
+       }
+      // append raw actual support speed
+      const tdRaw = document.createElement('td');
+      tdRaw.textContent = !isNaN(actual) ? actual.toFixed(2) : '';
+      tr.appendChild(tdRaw);
+
+      actual = actual + 5 * avgSwapCount; // add 5 seconds for each average swap count
+      // append effective support speed
+      const tdActual = document.createElement('td');
       tdActual.textContent = !isNaN(actual) ? actual.toFixed(2) : '';
       tr.appendChild(tdActual);
-      // append 1時間取得回数 using adjusted avgSwapCount
-      const tdHour = document.createElement('td');
-      const amountCount = parseFloat(entry.amount);
-      const denom = actual + avgSwapCount * 5;
-      const hourCount = denom > 0 ? (3600 / denom) * amountCount : 0;
-      tdHour.textContent = !isNaN(hourCount) ? hourCount.toFixed(2) : '';
-      tr.appendChild(tdHour);
+       // append 1時間取得回数 using adjusted avgSwapCount
+       const tdHour = document.createElement('td');
+       const amountCount = parseFloat(entry.amount);
+       const denom = actual + avgSwapCount * 5;
+       const hourCount = denom > 0 ? (3600 / denom) * amountCount : 0;
+       tdHour.textContent = !isNaN(hourCount) ? hourCount.toFixed(2) : '';
+       tr.appendChild(tdHour);
       // operation buttons: only for added entries
       const tdOp = document.createElement('td');
       if (!entry._orig) {
@@ -225,8 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // After filtering, default sort by 1時間取得回数 (column index 14) descending
     const rows = Array.from(tableBody.querySelectorAll('tr'));
     rows.sort((a, b) => {
-      const vA = parseFloat(a.cells[14].textContent) || 0;
-      const vB = parseFloat(b.cells[14].textContent) || 0;
+      const vA = parseFloat(a.cells[15].textContent) || 0;
+      const vB = parseFloat(b.cells[15].textContent) || 0;
       return vB - vA;
     });
     rows.forEach(r => tableBody.appendChild(r));
@@ -261,13 +270,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add sorting on 1時間取得回数 column (new index 14) by direct DOM row sort
   let hourSortDir = 1;
-  const hourTh = document.querySelectorAll('#pokemon-table thead th')[14];
+  const hourTh = document.querySelectorAll('#pokemon-table thead th')[15];
   hourTh.style.cursor = 'pointer';
   hourTh.addEventListener('click', () => {
-    const rows = Array.from(tableBody.querySelectorAll('tr'));
+    const rows = Array.from(tableBody.querySelectorAll('tr'));  
     rows.sort((a, b) => {
-      const vA = parseFloat(a.cells[14].textContent) || 0;
-      const vB = parseFloat(b.cells[14].textContent) || 0;
+      const vA = parseFloat(a.cells[15].textContent) || 0;
+      const vB = parseFloat(b.cells[15].textContent) || 0;
       return hourSortDir * (vA - vB);
     });
     rows.forEach(r => tableBody.appendChild(r));
@@ -305,8 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Default sort by 1時間取得回数 (column index 14) descending
       const initialRows = Array.from(tableBody.querySelectorAll('tr'));
       initialRows.sort((a, b) => {
-        const vA = parseFloat(a.cells[14].textContent) || 0;
-        const vB = parseFloat(b.cells[14].textContent) || 0;
+        const vA = parseFloat(a.cells[15].textContent) || 0;
+        const vB = parseFloat(b.cells[15].textContent) || 0;
         return vB - vA;
       });
       initialRows.forEach(r => tableBody.appendChild(r));

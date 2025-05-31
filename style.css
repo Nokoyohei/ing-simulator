@@ -112,3 +112,18 @@ input:focus, select:focus {
   font-size: 20px;
   color: #333;
 }
+
+/* Style for add button */
+#add-btn {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#add-btn:hover {
+  background-color: #1976D2;
+}
