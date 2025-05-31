@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         td.textContent = entry[key];
         tr.appendChild(td);
       });
+      // placeholder cells for new columns to match header order
+      for (let i = 0; i < 6; i++) {
+        const td = document.createElement('td');
+        td.textContent = '-';
+        tr.appendChild(td);
+      }
       // append average swap count with level-specific multiplier
       const tdAvg = document.createElement('td');
       const percent = parseFloat(entry.ing_percent);
@@ -66,11 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
       (ingTerm === '' || entry.ing.includes(ingTerm))
     );
     renderTable(filtered);
-    // After filtering, default sort by 1時間取得回数 (column index 8) descending
+    // After filtering, default sort by 1時間取得回数 (column index 14) descending
     const rows = Array.from(tableBody.querySelectorAll('tr'));
     rows.sort((a, b) => {
-      const vA = parseFloat(a.cells[8].textContent) || 0;
-      const vB = parseFloat(b.cells[8].textContent) || 0;
+      const vA = parseFloat(a.cells[14].textContent) || 0;
+      const vB = parseFloat(b.cells[14].textContent) || 0;
       return vB - vA;
     });
     rows.forEach(r => tableBody.appendChild(r));
@@ -79,13 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
   nameDropdown.addEventListener('change', applyFilter);
   ingDropdown.addEventListener('change', applyFilter);
 
-  // Add sorting on header click
-  const columns = ['name','ing','amount','level','help_speed','ing_percent', 'actual_speed', 'hour_count'];
+  // Add sorting on header click for first six data columns
+  const columns = ['name','ing','amount','level','help_speed','ing_percent'];
   let currentSort = { key: null, direction: 1 };
   const headers = document.querySelectorAll('#pokemon-table thead th');
   headers.forEach((th, index) => {
-    th.style.cursor = 'pointer';
     const key = columns[index];
+    if (!key) return;
+    th.style.cursor = 'pointer';
     th.addEventListener('click', () => {
       if (currentSort.key === key) currentSort.direction *= -1;
       else { currentSort.key = key; currentSort.direction = 1; }
@@ -101,15 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
       applyFilter();
     });
   });
-  // Add sorting on 1時間取得回数 column (index 8) by direct DOM row sort
+
+  // Add sorting on 1時間取得回数 column (new index 14) by direct DOM row sort
   let hourSortDir = 1;
-  const hourTh = document.querySelectorAll('#pokemon-table thead th')[8];
+  const hourTh = document.querySelectorAll('#pokemon-table thead th')[14];
   hourTh.style.cursor = 'pointer';
   hourTh.addEventListener('click', () => {
     const rows = Array.from(tableBody.querySelectorAll('tr'));
     rows.sort((a, b) => {
-      const vA = parseFloat(a.cells[8].textContent) || 0;
-      const vB = parseFloat(b.cells[8].textContent) || 0;
+      const vA = parseFloat(a.cells[14].textContent) || 0;
+      const vB = parseFloat(b.cells[14].textContent) || 0;
       return hourSortDir * (vA - vB);
     });
     rows.forEach(r => tableBody.appendChild(r));
@@ -141,11 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
         ingDropdown.appendChild(opt);
       });
       renderTable(pokemonData);
-      // Default sort by 1時間取得回数 (column index 8) descending
+      // Default sort by 1時間取得回数 (column index 14) descending
       const initialRows = Array.from(tableBody.querySelectorAll('tr'));
       initialRows.sort((a, b) => {
-        const vA = parseFloat(a.cells[8].textContent) || 0;
-        const vB = parseFloat(b.cells[8].textContent) || 0;
+        const vA = parseFloat(a.cells[14].textContent) || 0;
+        const vB = parseFloat(b.cells[14].textContent) || 0;
         return vB - vA;
       });
       initialRows.forEach(r => tableBody.appendChild(r));
