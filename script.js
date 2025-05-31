@@ -5,11 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const ingInput = document.getElementById('search-ing-input');
   const ingDropdown = document.getElementById('search-ing-dropdown');
   const ticketCheckbox = document.getElementById('ticket-checkbox');
+  const oteboDropdown = document.getElementById('otebo-dropdown');
   let pokemonData = [];
-
-  // List of all data keys including new flag columns
-  const dataKeys = ['name','ing','amount','level','help_speed','ing_percent',
-    'ospS','ospM','ingS','ingM','otebo','ijippari','ingUp','hikaeme','spUp'];
 
   function renderTable(data) {
     tableBody.innerHTML = '';
@@ -20,10 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
         td.textContent = entry[key];
         tr.appendChild(td);
       });
-      // append average swap count = 100/percent
+      // append average swap count with level-specific multiplier
       const tdAvg = document.createElement('td');
       const percent = parseFloat(entry.ing_percent);
-      tdAvg.textContent = percent > 0 ? (100/percent).toFixed(2) : '';
+      const lvl = parseFloat(entry.level);
+      // apply multiplier: lvl30 -> half, lvl60 -> one-third
+      let effPercent = percent;
+      if (lvl === 30) effPercent = percent * 0.5;
+      else if (lvl === 60) effPercent = percent / 3;
+      const avgSwapCount = effPercent > 0 ? 100 / effPercent : 0;
+      tdAvg.textContent = avgSwapCount.toFixed(2);
       tr.appendChild(tdAvg);
       // append actual support speed: help_speed * (1 - (level-1)*0.002) * 0.45
       const tdActual = document.createElement('td');
@@ -34,8 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (ticketCheckbox && ticketCheckbox.checked) {
         actual = actual / 1.2;
       }
+      // apply おてぼ multiplier
+      const oteboCount = oteboDropdown ? parseInt(oteboDropdown.value, 10) : 0;
+      actual = actual * (1 - 0.07 * oteboCount);
       tdActual.textContent = !isNaN(actual) ? actual.toFixed(2) : '';
       tr.appendChild(tdActual);
+      // append 1時間取得回数 using adjusted avgSwapCount
+      const tdHour = document.createElement('td');
+      const amountCount = parseFloat(entry.amount);
+      const denom = actual + avgSwapCount * 5;
+      const hourCount = denom > 0 ? (3600 / denom) * amountCount : 0;
+      tdHour.textContent = !isNaN(hourCount) ? hourCount.toFixed(2) : '';
+      tr.appendChild(tdHour);
       tableBody.appendChild(tr);
     });
   }
@@ -53,13 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
       (ingTerm === '' || entry.ing.includes(ingTerm))
     );
     renderTable(filtered);
+    // After filtering, default sort by 1時間取得回数 (column index 8) descending
+    const rows = Array.from(tableBody.querySelectorAll('tr'));
+    rows.sort((a, b) => {
+      const vA = parseFloat(a.cells[8].textContent) || 0;
+      const vB = parseFloat(b.cells[8].textContent) || 0;
+      return vB - vA;
+    });
+    rows.forEach(r => tableBody.appendChild(r));
   }
   // Listen to dropdown change as well
   nameDropdown.addEventListener('change', applyFilter);
   ingDropdown.addEventListener('change', applyFilter);
 
   // Add sorting on header click
-  const columns = ['name','ing','amount','level','help_speed','ing_percent'];
+  const columns = ['name','ing','amount','level','help_speed','ing_percent', 'actual_speed', 'hour_count'];
   let currentSort = { key: null, direction: 1 };
   const headers = document.querySelectorAll('#pokemon-table thead th');
   headers.forEach((th, index) => {
@@ -80,10 +101,25 @@ document.addEventListener('DOMContentLoaded', () => {
       applyFilter();
     });
   });
+  // Add sorting on 1時間取得回数 column (index 8) by direct DOM row sort
+  let hourSortDir = 1;
+  const hourTh = document.querySelectorAll('#pokemon-table thead th')[8];
+  hourTh.style.cursor = 'pointer';
+  hourTh.addEventListener('click', () => {
+    const rows = Array.from(tableBody.querySelectorAll('tr'));
+    rows.sort((a, b) => {
+      const vA = parseFloat(a.cells[8].textContent) || 0;
+      const vB = parseFloat(b.cells[8].textContent) || 0;
+      return hourSortDir * (vA - vB);
+    });
+    rows.forEach(r => tableBody.appendChild(r));
+    hourSortDir *= -1;
+  });
 
   nameInput.addEventListener('input', applyFilter);
   ingInput.addEventListener('input', applyFilter);
   ticketCheckbox.addEventListener('change', applyFilter);
+  oteboDropdown.addEventListener('change', applyFilter);
 
   fetch('./data/pokemon_data.json')
     .then(response => {
@@ -105,6 +141,14 @@ document.addEventListener('DOMContentLoaded', () => {
         ingDropdown.appendChild(opt);
       });
       renderTable(pokemonData);
+      // Default sort by 1時間取得回数 (column index 8) descending
+      const initialRows = Array.from(tableBody.querySelectorAll('tr'));
+      initialRows.sort((a, b) => {
+        const vA = parseFloat(a.cells[8].textContent) || 0;
+        const vB = parseFloat(b.cells[8].textContent) || 0;
+        return vB - vA;
+      });
+      initialRows.forEach(r => tableBody.appendChild(r));
     })
     .catch(error => {
       console.error('Error fetching or parsing JSON:', error);
