@@ -1,0 +1,2506 @@
+[
+    {
+        "name": "アゴジムシ",
+        "ing": "あまいミツ",
+        "amount": "11",
+        "level": "60",
+        "help_speed": "4600",
+        "ing_percent": "15.5"
+    },
+    {
+        "name": "アゴジムシ",
+        "ing": "めざましコーヒー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4600",
+        "ing_percent": "15.5"
+    },
+    {
+        "name": "アゴジムシ",
+        "ing": "あじわいキノコ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4600",
+        "ing_percent": "15.5"
+    },
+    {
+        "name": "アゴジムシ",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4600",
+        "ing_percent": "15.5"
+    },
+    {
+        "name": "アゴジムシ",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "4600",
+        "ing_percent": "15.5"
+    },
+    {
+        "name": "アチゲータ",
+        "ing": "とくせんリンゴ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "アチゲータ",
+        "ing": "マメミート",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "アチゲータ",
+        "ing": "とくせんリンゴ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3100",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "アチゲータ",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "アチゲータ",
+        "ing": "マメミート",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3100",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "アブソル",
+        "ing": "とくせんリンゴ",
+        "amount": "12",
+        "level": "60",
+        "help_speed": "2950",
+        "ing_percent": "17.8"
+    },
+    {
+        "name": "アブソル",
+        "ing": "とくせんリンゴ",
+        "amount": "8",
+        "level": "30",
+        "help_speed": "2950",
+        "ing_percent": "17.8"
+    },
+    {
+        "name": "アブソル",
+        "ing": "あじわいキノコ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2950",
+        "ing_percent": "17.8"
+    },
+    {
+        "name": "アブソル",
+        "ing": "リラックスカカオ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2950",
+        "ing_percent": "17.8"
+    },
+    {
+        "name": "アブソル",
+        "ing": "リラックスカカオ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2950",
+        "ing_percent": "17.8"
+    },
+    {
+        "name": "イシツブテ",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5700",
+        "ing_percent": "28.1"
+    },
+    {
+        "name": "イシツブテ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "5700",
+        "ing_percent": "28.1"
+    },
+    {
+        "name": "イシツブテ",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5700",
+        "ing_percent": "28.1"
+    },
+    {
+        "name": "イシツブテ",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "5700",
+        "ing_percent": "28.1"
+    },
+    {
+        "name": "イシツブテ",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "5700",
+        "ing_percent": "28.1"
+    },
+    {
+        "name": "ウェーニバル",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "23.2"
+    },
+    {
+        "name": "ウェーニバル",
+        "ing": "ピュアなオイル",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "23.2"
+    },
+    {
+        "name": "ウェーニバル",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2600",
+        "ing_percent": "23.2"
+    },
+    {
+        "name": "ウェーニバル",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "23.2"
+    },
+    {
+        "name": "ウェーニバル",
+        "ing": "ふといながねぎ",
+        "amount": "2",
+        "level": "30",
+        "help_speed": "2600",
+        "ing_percent": "23.2"
+    },
+    {
+        "name": "ウェルカモ",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3600",
+        "ing_percent": "25.9"
+    },
+    {
+        "name": "ウェルカモ",
+        "ing": "ピュアなオイル",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3600",
+        "ing_percent": "25.9"
+    },
+    {
+        "name": "ウェルカモ",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3600",
+        "ing_percent": "25.9"
+    },
+    {
+        "name": "ウェルカモ",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "3600",
+        "ing_percent": "25.9"
+    },
+    {
+        "name": "ウェルカモ",
+        "ing": "ふといながねぎ",
+        "amount": "2",
+        "level": "30",
+        "help_speed": "3600",
+        "ing_percent": "25.9"
+    },
+    {
+        "name": "ウッウ",
+        "ing": "とくせんエッグ",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "16.5"
+    },
+    {
+        "name": "ウッウ",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "16.5"
+    },
+    {
+        "name": "ウッウ",
+        "ing": "ほっこりポテト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "16.5"
+    },
+    {
+        "name": "ウッウ",
+        "ing": "ピュアなオイル",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2700",
+        "ing_percent": "16.5"
+    },
+    {
+        "name": "ウッウ",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2700",
+        "ing_percent": "16.5"
+    },
+    {
+        "name": "ウツドン",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "23.5"
+    },
+    {
+        "name": "ウツドン",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "23.5"
+    },
+    {
+        "name": "ウツドン",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3800",
+        "ing_percent": "23.5"
+    },
+    {
+        "name": "ウツドン",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3800",
+        "ing_percent": "23.5"
+    },
+    {
+        "name": "ウツドン",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "23.5"
+    },
+    {
+        "name": "ウツボット",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "ウツボット",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "ウツボット",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "ウツボット",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "ウツボット",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "ウパー",
+        "ing": "マメミート",
+        "amount": "12",
+        "level": "60",
+        "help_speed": "5900",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ウパー",
+        "ing": "ほっこりポテト",
+        "amount": "10",
+        "level": "60",
+        "help_speed": "5900",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ウパー",
+        "ing": "あじわいキノコ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5900",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ウパー",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "5900",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ウパー",
+        "ing": "あじわいキノコ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5900",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "カイリュー",
+        "ing": "ピュアなオイル",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "26.4"
+    },
+    {
+        "name": "カイリュー",
+        "ing": "げきからハーブ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "26.4"
+    },
+    {
+        "name": "カイリュー",
+        "ing": "ワカクサコーン",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "26.4"
+    },
+    {
+        "name": "カイリュー",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2600",
+        "ing_percent": "26.4"
+    },
+    {
+        "name": "カイリュー",
+        "ing": "ワカクサコーン",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2600",
+        "ing_percent": "26.4"
+    },
+    {
+        "name": "カイロス",
+        "ing": "とくせんリンゴ",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "カイロス",
+        "ing": "あまいミツ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "カイロス",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "カイロス",
+        "ing": "あまいミツ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2400",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "カイロス",
+        "ing": "とくせんリンゴ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2400",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "カメール",
+        "ing": "モーモーミルク",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "カメール",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "カメール",
+        "ing": "モーモーミルク",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3400",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "カメール",
+        "ing": "リラックスカカオ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "カメール",
+        "ing": "リラックスカカオ",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "3400",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "カメックス",
+        "ing": "モーモーミルク",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "27.5"
+    },
+    {
+        "name": "カメックス",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "27.5"
+    },
+    {
+        "name": "カメックス",
+        "ing": "モーモーミルク",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "27.5"
+    },
+    {
+        "name": "カメックス",
+        "ing": "リラックスカカオ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "27.5"
+    },
+    {
+        "name": "カメックス",
+        "ing": "リラックスカカオ",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "27.5"
+    },
+    {
+        "name": "ガルーラ",
+        "ing": "ワカクサ大豆",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "22.2"
+    },
+    {
+        "name": "ガルーラ",
+        "ing": "あったかジンジャー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "22.2"
+    },
+    {
+        "name": "ガルーラ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "22.2"
+    },
+    {
+        "name": "ガルーラ",
+        "ing": "あったかジンジャー",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "22.2"
+    },
+    {
+        "name": "ガルーラ",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "22.2"
+    },
+    {
+        "name": "キテルグマ",
+        "ing": "マメミート",
+        "amount": "10",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "キテルグマ",
+        "ing": "とくせんエッグ",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "キテルグマ",
+        "ing": "ワカクサコーン",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "キテルグマ",
+        "ing": "マメミート",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "キテルグマ",
+        "ing": "ワカクサコーン",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "キュワワー",
+        "ing": "あったかジンジャー",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "2500",
+        "ing_percent": "16.7"
+    },
+    {
+        "name": "キュワワー",
+        "ing": "ワカクサコーン",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2500",
+        "ing_percent": "16.7"
+    },
+    {
+        "name": "キュワワー",
+        "ing": "リラックスカカオ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2500",
+        "ing_percent": "16.7"
+    },
+    {
+        "name": "キュワワー",
+        "ing": "あったかジンジャー",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "2500",
+        "ing_percent": "16.7"
+    },
+    {
+        "name": "キュワワー",
+        "ing": "ワカクサコーン",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2500",
+        "ing_percent": "16.7"
+    },
+    {
+        "name": "グレッグル",
+        "ing": "マメミート",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "5600",
+        "ing_percent": "22.8"
+    },
+    {
+        "name": "グレッグル",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5600",
+        "ing_percent": "22.8"
+    },
+    {
+        "name": "グレッグル",
+        "ing": "ピュアなオイル",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5600",
+        "ing_percent": "22.8"
+    },
+    {
+        "name": "グレッグル",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5600",
+        "ing_percent": "22.8"
+    },
+    {
+        "name": "クワガノン",
+        "ing": "あまいミツ",
+        "amount": "11",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "19.4"
+    },
+    {
+        "name": "クワガノン",
+        "ing": "あじわいキノコ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "19.4"
+    },
+    {
+        "name": "クワガノン",
+        "ing": "めざましコーヒー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "19.4"
+    },
+    {
+        "name": "クワガノン",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "19.4"
+    },
+    {
+        "name": "クワガノン",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "19.4"
+    },
+    {
+        "name": "クワッス",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4800",
+        "ing_percent": "26.1"
+    },
+    {
+        "name": "クワッス",
+        "ing": "ピュアなオイル",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "4800",
+        "ing_percent": "26.1"
+    },
+    {
+        "name": "クワッス",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4800",
+        "ing_percent": "26.1"
+    },
+    {
+        "name": "クワッス",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "4800",
+        "ing_percent": "26.1"
+    },
+    {
+        "name": "クワッス",
+        "ing": "ふといながねぎ",
+        "amount": "2",
+        "level": "30",
+        "help_speed": "4800",
+        "ing_percent": "26.1"
+    },
+    {
+        "name": "ゲンガー",
+        "ing": "ピュアなオイル",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2200",
+        "ing_percent": "16.1"
+    },
+    {
+        "name": "ゲンガー",
+        "ing": "げきからハーブ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2200",
+        "ing_percent": "16.1"
+    },
+    {
+        "name": "ゲンガー",
+        "ing": "あじわいキノコ",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2200",
+        "ing_percent": "16.1"
+    },
+    {
+        "name": "ゲンガー",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2200",
+        "ing_percent": "16.1"
+    },
+    {
+        "name": "ゲンガー",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2200",
+        "ing_percent": "16.1"
+    },
+    {
+        "name": "ゴース",
+        "ing": "ピュアなオイル",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "14.4"
+    },
+    {
+        "name": "ゴース",
+        "ing": "げきからハーブ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "14.4"
+    },
+    {
+        "name": "ゴース",
+        "ing": "あじわいキノコ",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "14.4"
+    },
+    {
+        "name": "ゴース",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3800",
+        "ing_percent": "14.4"
+    },
+    {
+        "name": "ゴース",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3800",
+        "ing_percent": "14.4"
+    },
+    {
+        "name": "ゴースト",
+        "ing": "ピュアなオイル",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "15.7"
+    },
+    {
+        "name": "ゴースト",
+        "ing": "げきからハーブ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "15.7"
+    },
+    {
+        "name": "ゴースト",
+        "ing": "あじわいキノコ",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "15.7"
+    },
+    {
+        "name": "ゴースト",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "15.7"
+    },
+    {
+        "name": "ゴースト",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "15.7"
+    },
+    {
+        "name": "ココドラ",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5700",
+        "ing_percent": "27.3"
+    },
+    {
+        "name": "ココドラ",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5700",
+        "ing_percent": "27.3"
+    },
+    {
+        "name": "ココドラ",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5700",
+        "ing_percent": "27.3"
+    },
+    {
+        "name": "ココドラ",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "5700",
+        "ing_percent": "27.3"
+    },
+    {
+        "name": "ココドラ",
+        "ing": "めざましコーヒー",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "5700",
+        "ing_percent": "27.3"
+    },
+    {
+        "name": "コドラ",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4200",
+        "ing_percent": "27.7"
+    },
+    {
+        "name": "コドラ",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4200",
+        "ing_percent": "27.7"
+    },
+    {
+        "name": "コドラ",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4200",
+        "ing_percent": "27.7"
+    },
+    {
+        "name": "コドラ",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "4200",
+        "ing_percent": "27.7"
+    },
+    {
+        "name": "コドラ",
+        "ing": "めざましコーヒー",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "4200",
+        "ing_percent": "27.7"
+    },
+    {
+        "name": "コリンク",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4400",
+        "ing_percent": "18.1"
+    },
+    {
+        "name": "コリンク",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4400",
+        "ing_percent": "18.1"
+    },
+    {
+        "name": "コリンク",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4400",
+        "ing_percent": "18.1"
+    },
+    {
+        "name": "コリンク",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "4400",
+        "ing_percent": "18.1"
+    },
+    {
+        "name": "コリンク",
+        "ing": "ピュアなオイル",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "4400",
+        "ing_percent": "18.1"
+    },
+    {
+        "name": "ゴローニャ",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "28"
+    },
+    {
+        "name": "ゴローニャ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "28"
+    },
+    {
+        "name": "ゴローニャ",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3100",
+        "ing_percent": "28"
+    },
+    {
+        "name": "ゴローニャ",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3100",
+        "ing_percent": "28"
+    },
+    {
+        "name": "ゴローニャ",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "28"
+    },
+    {
+        "name": "ゴローン",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4000",
+        "ing_percent": "27.2"
+    },
+    {
+        "name": "ゴローン",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "4000",
+        "ing_percent": "27.2"
+    },
+    {
+        "name": "ゴローン",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4000",
+        "ing_percent": "27.2"
+    },
+    {
+        "name": "ゴローン",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "4000",
+        "ing_percent": "27.2"
+    },
+    {
+        "name": "ゴローン",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "4000",
+        "ing_percent": "27.2"
+    },
+    {
+        "name": "サナギラス",
+        "ing": "ワカクサ大豆",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3600",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "サナギラス",
+        "ing": "マメミート",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3600",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "サナギラス",
+        "ing": "あったかジンジャー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3600",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "サナギラス",
+        "ing": "あったかジンジャー",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3600",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "サナギラス",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3600",
+        "ing_percent": "24.7"
+    },
+    {
+        "name": "ゼニガメ",
+        "ing": "モーモーミルク",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4500",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "ゼニガメ",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4500",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "ゼニガメ",
+        "ing": "モーモーミルク",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4500",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "ゼニガメ",
+        "ing": "リラックスカカオ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "4500",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "ゼニガメ",
+        "ing": "リラックスカカオ",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "4500",
+        "ing_percent": "27.1"
+    },
+    {
+        "name": "ダグトリオ",
+        "ing": "ワカクサ大豆",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ダグトリオ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ダグトリオ",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ダグトリオ",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ダグトリオ",
+        "ing": "ふといながねぎ",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ディグダ",
+        "ing": "ワカクサ大豆",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "4300",
+        "ing_percent": "19.2"
+    },
+    {
+        "name": "ディグダ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4300",
+        "ing_percent": "19.2"
+    },
+    {
+        "name": "ディグダ",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4300",
+        "ing_percent": "19.2"
+    },
+    {
+        "name": "ディグダ",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "4300",
+        "ing_percent": "19.2"
+    },
+    {
+        "name": "ディグダ",
+        "ing": "ふといながねぎ",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "4300",
+        "ing_percent": "19.2"
+    },
+    {
+        "name": "デリバード",
+        "ing": "とくせんリンゴ",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "2500",
+        "ing_percent": "18.8"
+    },
+    {
+        "name": "デリバード",
+        "ing": "とくせんエッグ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2500",
+        "ing_percent": "18.8"
+    },
+    {
+        "name": "デリバード",
+        "ing": "とくせんリンゴ",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "2500",
+        "ing_percent": "18.8"
+    },
+    {
+        "name": "デリバード",
+        "ing": "とくせんエッグ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2500",
+        "ing_percent": "18.8"
+    },
+    {
+        "name": "デリバード",
+        "ing": "リラックスカカオ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "2500",
+        "ing_percent": "18.8"
+    },
+    {
+        "name": "デンヂムシ",
+        "ing": "あまいミツ",
+        "amount": "11",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "15.4"
+    },
+    {
+        "name": "デンヂムシ",
+        "ing": "あじわいキノコ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "15.4"
+    },
+    {
+        "name": "デンヂムシ",
+        "ing": "めざましコーヒー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "15.4"
+    },
+    {
+        "name": "デンヂムシ",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3300",
+        "ing_percent": "15.4"
+    },
+    {
+        "name": "デンヂムシ",
+        "ing": "あじわいキノコ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3300",
+        "ing_percent": "15.4"
+    },
+    {
+        "name": "ドオー",
+        "ing": "ほっこりポテト",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ドオー",
+        "ing": "リラックスカカオ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ドオー",
+        "ing": "めざましコーヒー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ドオー",
+        "ing": "リラックスカカオ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ドオー",
+        "ing": "めざましコーヒー",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ドクロッグ",
+        "ing": "マメミート",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "ドクロッグ",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "ドクロッグ",
+        "ing": "ピュアなオイル",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3400",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "ドクロッグ",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3400",
+        "ing_percent": "22.9"
+    },
+    {
+        "name": "ニャオハ",
+        "ing": "モーモーミルク",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "4600",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ニャオハ",
+        "ing": "あったかジンジャー",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "4600",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ニャオハ",
+        "ing": "ほっこりポテト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4600",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ニャオハ",
+        "ing": "モーモーミルク",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "4600",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ニャオハ",
+        "ing": "ほっこりポテト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4600",
+        "ing_percent": "20.8"
+    },
+    {
+        "name": "ニャローテ",
+        "ing": "モーモーミルク",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.9"
+    },
+    {
+        "name": "ニャローテ",
+        "ing": "あったかジンジャー",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.9"
+    },
+    {
+        "name": "ニャローテ",
+        "ing": "ほっこりポテト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.9"
+    },
+    {
+        "name": "ニャローテ",
+        "ing": "モーモーミルク",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.9"
+    },
+    {
+        "name": "ニャローテ",
+        "ing": "ほっこりポテト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.9"
+    },
+    {
+        "name": "ヌイコグマ",
+        "ing": "マメミート",
+        "amount": "10",
+        "level": "60",
+        "help_speed": "4100",
+        "ing_percent": "22.5"
+    },
+    {
+        "name": "ヌイコグマ",
+        "ing": "とくせんエッグ",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "4100",
+        "ing_percent": "22.5"
+    },
+    {
+        "name": "ヌイコグマ",
+        "ing": "ワカクサコーン",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4100",
+        "ing_percent": "22.5"
+    },
+    {
+        "name": "ヌイコグマ",
+        "ing": "マメミート",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "4100",
+        "ing_percent": "22.5"
+    },
+    {
+        "name": "ヌイコグマ",
+        "ing": "ワカクサコーン",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4100",
+        "ing_percent": "22.5"
+    },
+    {
+        "name": "ヌオー",
+        "ing": "マメミート",
+        "amount": "12",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ヌオー",
+        "ing": "ほっこりポテト",
+        "amount": "10",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ヌオー",
+        "ing": "あじわいキノコ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3400",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ヌオー",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "3400",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ヌオー",
+        "ing": "あじわいキノコ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3400",
+        "ing_percent": "19"
+    },
+    {
+        "name": "ハクリュー",
+        "ing": "ピュアなオイル",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "26.2"
+    },
+    {
+        "name": "ハクリュー",
+        "ing": "げきからハーブ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "26.2"
+    },
+    {
+        "name": "ハクリュー",
+        "ing": "ワカクサコーン",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3800",
+        "ing_percent": "26.2"
+    },
+    {
+        "name": "ハクリュー",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3800",
+        "ing_percent": "26.2"
+    },
+    {
+        "name": "ハクリュー",
+        "ing": "ワカクサコーン",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3800",
+        "ing_percent": "26.2"
+    },
+    {
+        "name": "ハピナス",
+        "ing": "あまいミツ",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ハピナス",
+        "ing": "とくせんエッグ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ハピナス",
+        "ing": "ほっこりポテト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3100",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ハピナス",
+        "ing": "とくせんエッグ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3100",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ハピナス",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3100",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "バリヤード",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "バリヤード",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "バリヤード",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "バリヤード",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "バリヤード",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "21.6"
+    },
+    {
+        "name": "バンギラス",
+        "ing": "ワカクサ大豆",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "バンギラス",
+        "ing": "マメミート",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "バンギラス",
+        "ing": "あったかジンジャー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "バンギラス",
+        "ing": "あったかジンジャー",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2700",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "バンギラス",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2700",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "ヒトカゲ",
+        "ing": "あったかジンジャー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ヒトカゲ",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ヒトカゲ",
+        "ing": "げきからハーブ",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ヒトカゲ",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ヒトカゲ",
+        "ing": "あったかジンジャー",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "フシギソウ",
+        "ing": "あまいミツ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "25.5"
+    },
+    {
+        "name": "フシギソウ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "25.5"
+    },
+    {
+        "name": "フシギソウ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "25.5"
+    },
+    {
+        "name": "フシギソウ",
+        "ing": "あまいミツ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3300",
+        "ing_percent": "25.5"
+    },
+    {
+        "name": "フシギソウ",
+        "ing": "あんみんトマト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3300",
+        "ing_percent": "25.5"
+    },
+    {
+        "name": "フシギダネ",
+        "ing": "あまいミツ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4400",
+        "ing_percent": "25.7"
+    },
+    {
+        "name": "フシギダネ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4400",
+        "ing_percent": "25.7"
+    },
+    {
+        "name": "フシギダネ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "4400",
+        "ing_percent": "25.7"
+    },
+    {
+        "name": "フシギダネ",
+        "ing": "あまいミツ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4400",
+        "ing_percent": "25.7"
+    },
+    {
+        "name": "フシギダネ",
+        "ing": "あんみんトマト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "4400",
+        "ing_percent": "25.7"
+    },
+    {
+        "name": "フシギバナ",
+        "ing": "あまいミツ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "フシギバナ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "フシギバナ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2800",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "フシギバナ",
+        "ing": "あまいミツ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "フシギバナ",
+        "ing": "あんみんトマト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2800",
+        "ing_percent": "26.6"
+    },
+    {
+        "name": "ホゲータ",
+        "ing": "とくせんリンゴ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4200",
+        "ing_percent": "25.4"
+    },
+    {
+        "name": "ホゲータ",
+        "ing": "マメミート",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "4200",
+        "ing_percent": "25.4"
+    },
+    {
+        "name": "ホゲータ",
+        "ing": "とくせんリンゴ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4200",
+        "ing_percent": "25.4"
+    },
+    {
+        "name": "ホゲータ",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "4200",
+        "ing_percent": "25.4"
+    },
+    {
+        "name": "ホゲータ",
+        "ing": "マメミート",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "4200",
+        "ing_percent": "25.4"
+    },
+    {
+        "name": "ボスゴドラ",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "28.5"
+    },
+    {
+        "name": "ボスゴドラ",
+        "ing": "ワカクサ大豆",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "28.5"
+    },
+    {
+        "name": "ボスゴドラ",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "28.5"
+    },
+    {
+        "name": "ボスゴドラ",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "28.5"
+    },
+    {
+        "name": "ボスゴドラ",
+        "ing": "めざましコーヒー",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "28.5"
+    },
+    {
+        "name": "マスカーニャ",
+        "ing": "モーモーミルク",
+        "amount": "9",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "19"
+    },
+    {
+        "name": "マスカーニャ",
+        "ing": "あったかジンジャー",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "19"
+    },
+    {
+        "name": "マスカーニャ",
+        "ing": "ほっこりポテト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2600",
+        "ing_percent": "19"
+    },
+    {
+        "name": "マスカーニャ",
+        "ing": "モーモーミルク",
+        "amount": "6",
+        "level": "30",
+        "help_speed": "2600",
+        "ing_percent": "19"
+    },
+    {
+        "name": "マスカーニャ",
+        "ing": "ほっこりポテト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2600",
+        "ing_percent": "19"
+    },
+    {
+        "name": "マダツボミ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5200",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "マダツボミ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "5200",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "マダツボミ",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5200",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "マダツボミ",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "5200",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "マダツボミ",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "5200",
+        "ing_percent": "23.3"
+    },
+    {
+        "name": "マネネ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4300",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "マネネ",
+        "ing": "ほっこりポテト",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "4300",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "マネネ",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4300",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "マネネ",
+        "ing": "ほっこりポテト",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "4300",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "マネネ",
+        "ing": "ふといながねぎ",
+        "amount": "4",
+        "level": "60",
+        "help_speed": "4300",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ミニリュウ",
+        "ing": "ピュアなオイル",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "5000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ミニリュウ",
+        "ing": "げきからハーブ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ミニリュウ",
+        "ing": "ワカクサコーン",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ミニリュウ",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ミニリュウ",
+        "ing": "ワカクサコーン",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "5000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "メタモン",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "メタモン",
+        "ing": "ピュアなオイル",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "メタモン",
+        "ing": "ふといながねぎ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "メタモン",
+        "ing": "ふといながねぎ",
+        "amount": "3",
+        "level": "30",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "メタモン",
+        "ing": "おいしいシッポ",
+        "amount": "3",
+        "level": "60",
+        "help_speed": "3500",
+        "ing_percent": "20.1"
+    },
+    {
+        "name": "ユキカブリ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5600",
+        "ing_percent": "25.1"
+    },
+    {
+        "name": "ユキカブリ",
+        "ing": "とくせんエッグ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "5600",
+        "ing_percent": "25.1"
+    },
+    {
+        "name": "ユキカブリ",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "5600",
+        "ing_percent": "25.1"
+    },
+    {
+        "name": "ユキカブリ",
+        "ing": "あじわいキノコ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "5600",
+        "ing_percent": "25.1"
+    },
+    {
+        "name": "ユキカブリ",
+        "ing": "とくせんエッグ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "5600",
+        "ing_percent": "25.1"
+    },
+    {
+        "name": "ユキノオー",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ユキノオー",
+        "ing": "とくせんエッグ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ユキノオー",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ユキノオー",
+        "ing": "あじわいキノコ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ユキノオー",
+        "ing": "とくせんエッグ",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "25"
+    },
+    {
+        "name": "ヨーギラス",
+        "ing": "ワカクサ大豆",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "4800",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ヨーギラス",
+        "ing": "マメミート",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "4800",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ヨーギラス",
+        "ing": "あったかジンジャー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "4800",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ヨーギラス",
+        "ing": "あったかジンジャー",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4800",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ヨーギラス",
+        "ing": "ワカクサ大豆",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "4800",
+        "ing_percent": "23.8"
+    },
+    {
+        "name": "ラウドボーン",
+        "ing": "とくせんリンゴ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "26.8"
+    },
+    {
+        "name": "ラウドボーン",
+        "ing": "マメミート",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "26.8"
+    },
+    {
+        "name": "ラウドボーン",
+        "ing": "とくせんリンゴ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2700",
+        "ing_percent": "26.8"
+    },
+    {
+        "name": "ラウドボーン",
+        "ing": "げきからハーブ",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "2700",
+        "ing_percent": "26.8"
+    },
+    {
+        "name": "ラウドボーン",
+        "ing": "マメミート",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2700",
+        "ing_percent": "26.8"
+    },
+    {
+        "name": "リザード",
+        "ing": "あったかジンジャー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "22.7"
+    },
+    {
+        "name": "リザード",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "22.7"
+    },
+    {
+        "name": "リザード",
+        "ing": "げきからハーブ",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3000",
+        "ing_percent": "22.7"
+    },
+    {
+        "name": "リザード",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "22.7"
+    },
+    {
+        "name": "リザード",
+        "ing": "あったかジンジャー",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3000",
+        "ing_percent": "22.7"
+    },
+    {
+        "name": "リザードン",
+        "ing": "あったかジンジャー",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "22.4"
+    },
+    {
+        "name": "リザードン",
+        "ing": "マメミート",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "22.4"
+    },
+    {
+        "name": "リザードン",
+        "ing": "げきからハーブ",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "22.4"
+    },
+    {
+        "name": "リザードン",
+        "ing": "マメミート",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2400",
+        "ing_percent": "22.4"
+    },
+    {
+        "name": "リザードン",
+        "ing": "あったかジンジャー",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2400",
+        "ing_percent": "22.4"
+    },
+    {
+        "name": "ルクシオ",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3200",
+        "ing_percent": "18.2"
+    },
+    {
+        "name": "ルクシオ",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3200",
+        "ing_percent": "18.2"
+    },
+    {
+        "name": "ルクシオ",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3200",
+        "ing_percent": "18.2"
+    },
+    {
+        "name": "ルクシオ",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "3200",
+        "ing_percent": "18.2"
+    },
+    {
+        "name": "ルクシオ",
+        "ing": "ピュアなオイル",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3200",
+        "ing_percent": "18.2"
+    },
+    {
+        "name": "レントラー",
+        "ing": "あんみんトマト",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "20"
+    },
+    {
+        "name": "レントラー",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "20"
+    },
+    {
+        "name": "レントラー",
+        "ing": "あんみんトマト",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "2400",
+        "ing_percent": "20"
+    },
+    {
+        "name": "レントラー",
+        "ing": "めざましコーヒー",
+        "amount": "5",
+        "level": "60",
+        "help_speed": "2400",
+        "ing_percent": "20"
+    },
+    {
+        "name": "レントラー",
+        "ing": "ピュアなオイル",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "2400",
+        "ing_percent": "20"
+    }
+]

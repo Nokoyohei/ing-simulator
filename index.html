@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemon Data Table</title>
+</head>
+<body>
+  <h1>Pokemon Data</h1>
+  <div>
+    <label for="search-input">名前で検索: </label>
+    <input type="text" id="search-input" placeholder="名前を入力">
+    <label for="search-dropdown">プルダウン検索(名前): </label>
+    <select id="search-dropdown">
+      <option value="">-- 全て --</option>
+    </select>
+    <label for="search-ing-input">食材で検索: </label>
+    <input type="text" id="search-ing-input" placeholder="食材を入力">
+    <label for="search-ing-dropdown">プルダウン検索(食材): </label>
+    <select id="search-ing-dropdown">
+      <option value="">-- 全て --</option>
+    </select>
+    <label><input type="checkbox" id="ticket-checkbox"> キャンチケ</label>
+  </div>
+  <table id="pokemon-table" border="1">
+    <thead>
+      <tr>
+        <th>名前</th><th>食材</th><th>数</th><th>レベル</th><th>お手スピ</th><th>％</th><th>平均入れ替え回数</th><th>実お手スピ</th>
+      </tr>
+    </thead>
+    <tbody id="pokemon-table-body"></tbody>
+  </table>
+  <script src="script.js" defer></script>
+</body>
+</html>
