@@ -45,3 +45,19 @@ input:focus, select:focus {
   border-color: #66afe9;
   box-shadow: 0 0 3px rgba(102,175,233,0.6);
 }
+.new-entry {
+  background-color: #e8f5e9;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+}
+.modal.hidden { display: none; }
+.modal-content {
+  background: #fff; padding: 20px; border-radius: 8px; width: 400px;
+}
+.modal-content .close {
+  float: right; cursor: pointer;
+}
