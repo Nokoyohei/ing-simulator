@@ -27,6 +27,62 @@ document.addEventListener('DOMContentLoaded', () => {
   const formIngM = document.getElementById('form-ingM');
   const formNature = document.getElementById('form-nature');
   const saveBtn = document.getElementById('save-btn');
+  // dynamically populate ingredient and amount based on selected Pokémon name
+  formName.addEventListener('input', () => {
+    const selName = formName.value;
+    const related = originalData.filter(e => e.name === selName);
+    // clear previous selects
+    formIng.innerHTML = '<option value="">-- 選択 --</option>';
+    formAmount.innerHTML = '<option value="">-- 選択 --</option>';
+    if (related.length) {
+      // known Pokémon: limit to related ingredients and amounts
+      const uniqueIngs = Array.from(new Set(related.map(e => e.ing))).sort();
+      uniqueIngs.forEach(ing => {
+        const opt = document.createElement('option'); opt.value = ing; opt.textContent = ing;
+        formIng.appendChild(opt);
+      });
+      // auto-select first ingredient
+      formIng.value = uniqueIngs[0];
+      // populate amount options for this ingredient
+      formIng.dispatchEvent(new Event('change'));
+    } else {
+      // arbitrary name: all ingredients and fixed range 2-15
+      const allIngs = Array.from(new Set(originalData.map(e => e.ing))).sort();
+      allIngs.forEach(ing => {
+        const opt = document.createElement('option'); opt.value = ing; opt.textContent = ing; formIng.appendChild(opt);
+      });
+      for (let i = 2; i <= 15; i++) {
+        const opt = document.createElement('option'); opt.value = i; opt.textContent = i; formAmount.appendChild(opt);
+      }
+    }
+  });
+  // repopulate amounts and auto-fill help/percent only for known Pokémon
+  formIng.addEventListener('change', () => {
+    const selName = formName.value;
+    const selIng = formIng.value;
+    const related = originalData.filter(e => e.name === selName && e.ing === selIng);
+    if (!related.length) return;
+    formAmount.innerHTML = '<option value="">-- 選択 --</option>';
+    const uniqueAmts = Array.from(new Set(related.map(e => e.amount))).sort((a, b) => a - b);
+    uniqueAmts.forEach(a => {
+      const opt = document.createElement('option'); opt.value = a; opt.textContent = a; formAmount.appendChild(opt);
+    });
+    formAmount.value = uniqueAmts[0];
+    // auto-fill defaults
+    formHelpSpeed.value = related[0].help_speed;
+    formIngPercent.value = related[0].ing_percent;
+  });
+  // after amount is selected, refine auto-fill if specific
+  formAmount.addEventListener('change', () => {
+    const selName = formName.value;
+    const selIng = formIng.value;
+    const selAmt = formAmount.value;
+    const match = originalData.find(e => e.name === selName && e.ing === selIng && String(e.amount) === selAmt);
+    if (match) {
+      formHelpSpeed.value = match.help_speed;
+      formIngPercent.value = match.ing_percent;
+    }
+  });
   let isEditing = false, editingIndex = null;
 
   function renderTable(data) {
@@ -54,10 +110,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const tdAvg = document.createElement('td');
       const percent = parseFloat(entry.ing_percent);
       const lvl = parseFloat(entry.level);
-      // apply multiplier: lvl30 -> half, lvl60 -> one-third
+      // compute effective percentage with nature and support flags
       let effPercent = percent;
-      if (lvl === 30) effPercent = percent * 0.5;
-      else if (lvl === 60) effPercent = percent / 3;
+      // nature modifiers: ひかえめ or 食↑ x1.2, いじっぱり x0.8
+      if (entry.nature === 'hikaeme' || entry.nature === 'ing_up') {
+        effPercent *= 1.2;
+      } else if (entry.nature === 'ijippari') {
+        effPercent *= 0.8;
+      }
+      // support modifiers: 食S (0.18), 食M (0.36)
+      const supportFactor = 1 + (entry.ingS ? 0.18 : 0) + (entry.ingM ? 0.36 : 0);
+      effPercent *= supportFactor;
+      // level-specific multiplier: lvl30 -> half, lvl60 -> one-third
+      if (lvl === 30) effPercent *= 0.5;
+      else if (lvl === 60) effPercent /= 3;
       const avgSwapCount = effPercent > 0 ? 100 / effPercent : 0;
       tdAvg.textContent = avgSwapCount.toFixed(2);
       tr.appendChild(tdAvg);
@@ -70,9 +136,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (ticketCheckbox && ticketCheckbox.checked) {
         actual = actual / 1.2;
       }
-      // apply おてぼ multiplier
+      // apply combined modifiers: おてぼ count, おてぼ flag, スピM, スピS; cap multiplier at minimum 0.65
       const oteboCount = oteboDropdown ? parseInt(oteboDropdown.value, 10) : 0;
-      actual = actual * (1 - 0.07 * oteboCount);
+      const flagOtebo = entry.otebo ? 0.05 : 0;
+      const flagSpM = entry.spM ? 0.14 : 0;
+      const flagSpS = entry.spS ? 0.07 : 0;
+      let modSum = oteboCount * 0.05 + flagOtebo + flagSpM + flagSpS;
+      let multiplier = 1 - modSum;
+      if (multiplier < 0.65) multiplier = 0.65;
+      actual = actual * multiplier;
+      // apply nature modifier: スピ↑ or いじっぱり => x0.9
+      if (['sp_up', 'ijippari'].includes(entry.nature)) {
+        actual = actual * 0.9;
+      }
+      if (['hikaeme'].includes(entry.nature)) {
+        actual = actual * 1.075;
+      }
       tdActual.textContent = !isNaN(actual) ? actual.toFixed(2) : '';
       tr.appendChild(tdActual);
       // append 1時間取得回数 using adjusted avgSwapCount
@@ -233,8 +312,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
    function showModal() {
      modal.classList.remove('hidden');
-    // populate ingredient select with unique options
-    formIng.innerHTML = '<option value="">-- 選択 --</option>';
+     // populate name suggestions in datalist
+     const nameList = document.getElementById('form-name-list');
+     nameList.innerHTML = '';
+     Array.from(new Set(originalData.map(e => e.name))).sort().forEach(name => {
+       const opt = document.createElement('option');
+       opt.value = name;
+       nameList.appendChild(opt);
+     });
+     // populate ingredient select with unique options
+     formIng.innerHTML = '<option value="">-- 選択 --</option>';
     Array.from(new Set(originalData.map(e => e.ing))).sort().forEach(ing => {
       const opt = document.createElement('option'); opt.value = ing; opt.textContent = ing; formIng.appendChild(opt);
     });
