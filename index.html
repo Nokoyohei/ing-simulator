@@ -37,7 +37,10 @@
       <span class="close">&times;</span>
       <h2>ポケモンを追加</h2>
       <form id="add-form">
-        <label>名前<select id="form-name"></select></label>
+        <label>名前
+          <input list="form-name-list" id="form-name" placeholder="名前を入力">
+          <datalist id="form-name-list"></datalist>
+        </label>
         <label>食材<select id="form-ing"></select></label>
         <label>数量<select id="form-amount"></select></label>
         <label>レベル<input type="number" id="form-level" min="30" max="100"></label>
@@ -49,7 +52,8 @@
         <label><input type="checkbox" id="form-ingS"> 食S</label>
         <label><input type="checkbox" id="form-ingM"> 食M</label>
         <label>性格<select id="form-nature">
-          <option value="sp_up">スピ↑</option>
+          <option value="sp_up">-</option>
+          <option value="ing_up">スピ↑</option>
           <option value="ing_up">食↑</option>
           <option value="ijippari">いじっぱり</option>
           <option value="hikaeme">ひかえめ</option>

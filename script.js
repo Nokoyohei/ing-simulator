@@ -39,12 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
         td.textContent = entry[key];
         tr.appendChild(td);
       });
-      // placeholder cells for new columns to match header order
-      for (let i = 0; i < 6; i++) {
+      // display form fields: おてぼ, スピM, スピS, 食S, 食M
+      [entry.otebo, entry.spM, entry.spS, entry.ingS, entry.ingM].forEach(flag => {
         const td = document.createElement('td');
-        td.textContent = '-';
+        td.textContent = flag ? '✔' : '-';
         tr.appendChild(td);
-      }
+      });
+      // display 性格
+      const tdNature = document.createElement('td');
+      const natureLabels = { sp_up: 'スピ↑', ing_up: '食↑', ijippari: 'いじっぱり', hikaeme: 'ひかえめ' };
+      tdNature.textContent = natureLabels[entry.nature] || '-';
+      tr.appendChild(tdNature);
       // append average swap count with level-specific multiplier
       const tdAvg = document.createElement('td');
       const percent = parseFloat(entry.ing_percent);
@@ -228,13 +233,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
    function showModal() {
      modal.classList.remove('hidden');
-     formName.innerHTML = '<option value="">-- 選択 --</option>';
-     Array.from(new Set(originalData.map(e => e.name))).sort().forEach(name => {
-       const opt = document.createElement('option'); opt.value = name; opt.textContent = name;
-       formName.appendChild(opt);
-     });
-     formIng.innerHTML = '<option value="">-- 選択 --</option>';
-     formAmount.innerHTML = '<option value="">-- 選択 --</option>';
+    // populate ingredient select with unique options
+    formIng.innerHTML = '<option value="">-- 選択 --</option>';
+    Array.from(new Set(originalData.map(e => e.ing))).sort().forEach(ing => {
+      const opt = document.createElement('option'); opt.value = ing; opt.textContent = ing; formIng.appendChild(opt);
+    });
+    // populate amount select with fixed range 2-15
+    formAmount.innerHTML = '<option value="">-- 選択 --</option>';
+    for (let i = 2; i <= 15; i++) {
+      const opt = document.createElement('option'); opt.value = i; opt.textContent = i; formAmount.appendChild(opt);
+    }
+     // clear input value
+     formName.value = '';
      formLevel.value = 30;
      formIngPercent.value = '';
      formHelpSpeed.value = '';
@@ -245,25 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
    addBtn.addEventListener('click', () => { isEditing = false; editingIndex = null; showModal(); });
    closeBtn.addEventListener('click', hideModal);
    modal.addEventListener('click', e => { if (e.target === modal) hideModal(); });
-   formName.addEventListener('change', () => {
-     const selName = formName.value;
-     const related = pokemonData.filter(e => e.name === selName);
-     // ing options
-     formIng.innerHTML = '<option value="">-- 選択 --</option>';
-     Array.from(new Set(related.map(e => e.ing))).sort().forEach(ing => {
-       const opt = document.createElement('option'); opt.value = ing; opt.textContent = ing; formIng.appendChild(opt);
-     });
-     // amount options
-     formAmount.innerHTML = '<option value="">-- 選択 --</option>';
-     Array.from(new Set(related.map(e => e.amount))).sort((a,b)=>a-b).forEach(a=>{
-       const opt = document.createElement('option'); opt.value = a; opt.textContent = a; formAmount.appendChild(opt);
-     });
-     // auto fill defaults
-     if (related.length) {
-       formHelpSpeed.value = related[0].help_speed;
-       formIngPercent.value = related[0].ing_percent;
-     }
-   });
    saveBtn.addEventListener('click', () => {
      const entry = {
         name: formName.value,

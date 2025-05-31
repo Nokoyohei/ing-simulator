@@ -61,3 +61,54 @@ input:focus, select:focus {
 .modal-content .close {
   float: right; cursor: pointer;
 }
+
+/* Modal form styling */
+.modal-content form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: normal;
+}
+.modal-content form label select,
+.modal-content form label input[type="number"] {
+  width: 100%;
+  margin-top: 4px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+/* Style text inputs and datalist inputs in modal */
+.modal-content form label input[list],
+.modal-content form label input[type="text"] {
+  width: 100%;
+  margin-top: 4px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+#save-btn {
+  margin-top: 16px;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#save-btn:hover {
+  background-color: #45a049;
+}
+.modal-content .close {
+  font-size: 28px;
+  line-height: 28px;
+  color: #333;
+}
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #333;
+}
