@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const supportFactor = 1 + (entry.ingS ? 0.18 : 0) + (entry.ingM ? 0.36 : 0);
       effPercent *= supportFactor;
       // level-specific multiplier: lvl30 -> half, lvl60 -> one-third
-      if (lvl === 30) effPercent *= 0.5;
+      if (lvl < 60) effPercent *= 0.5;
       else if (lvl === 60) effPercent /= 3;
       const avgSwapCount = effPercent > 0 ? 100 / effPercent : 0;
       tdAvg.textContent = avgSwapCount.toFixed(2);
