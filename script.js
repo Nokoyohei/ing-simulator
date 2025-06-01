@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const oteboDropdown = document.getElementById('otebo-dropdown');
   let originalData = [];
   let addedData = JSON.parse(localStorage.getItem('addedPokemon') || '[]');
+  // ensure added entries are flagged as non-original for green background
+  addedData = addedData.map(item => Object.assign({}, item, { _orig: false }));
   let pokemonData = [];
 
   // Add/Edit modal elements
@@ -172,46 +174,52 @@ document.addEventListener('DOMContentLoaded', () => {
        const hourCount = denom > 0 ? (3600 / denom) * amountCount : 0;
        tdHour.textContent = !isNaN(hourCount) ? hourCount.toFixed(2) : '';
        tr.appendChild(tdHour);
-      // operation buttons: only for added entries
+      // operation buttons: duplicate-edit for all entries, delete only for added entries
       const tdOp = document.createElement('td');
+      // duplicate-edit button
+      const dupBtn = document.createElement('button');
+      dupBtn.textContent = '複製編集';
+      dupBtn.classList.add('dup-btn');
+      dupBtn.addEventListener('click', () => {
+        // save current filters
+        savedFilters = {
+          nameTerm: nameInput.value,
+          nameDropdown: nameDropdown.value,
+          ingTerm: ingInput.value,
+          ingDropdown: ingDropdown.value,
+          ticketChecked: ticketCheckbox.checked,
+          oteboValue: oteboDropdown.value
+        };
+        // always duplicate as new entry
+        isEditing = false; editingIndex = null;
+        showModal();
+        // populate form fields
+        formName.value = entry.name; formName.dispatchEvent(new Event('change'));
+        formIng.value = entry.ing; formAmount.value = entry.amount;
+        formLevel.value = entry.level; formHelpSpeed.value = entry.help_speed;
+        formIngPercent.value = entry.ing_percent;
+        formOtebo.checked = entry.otebo; formSpM.checked = entry.spM;
+        formSpS.checked = entry.spS; formIngS.checked = entry.ingS;
+        formIngM.checked = entry.ingM; formNature.value = entry.nature;
+      });
+      tdOp.append(dupBtn);
+      // delete button for added entries
       if (!entry._orig) {
-        const editBtnRow = document.createElement('button'); editBtnRow.textContent = '編集';
-        editBtnRow.addEventListener('click', () => {
-          // save current filter settings for edit
-          savedFilters = {
-            nameTerm: nameInput.value,
-            nameDropdown: nameDropdown.value,
-            ingTerm: ingInput.value,
-            ingDropdown: ingDropdown.value,
-            ticketChecked: ticketCheckbox.checked,
-            oteboValue: oteboDropdown.value
-          };
-          isEditing = true; editingIndex = index; showModal();
-          formName.value = entry.name; formName.dispatchEvent(new Event('change'));
-          formIng.value = entry.ing; formAmount.value = entry.amount;
-          formLevel.value = entry.level; formHelpSpeed.value = entry.help_speed;
-          formIngPercent.value = entry.ing_percent;
-          formOtebo.checked = entry.otebo; formSpM.checked = entry.spM;
-          formSpS.checked = entry.spS; formIngS.checked = entry.ingS;
-          formIngM.checked = entry.ingM; formNature.value = entry.nature;
-        });
-        const delBtnRow = document.createElement('button'); delBtnRow.textContent = '削除';
-        delBtnRow.addEventListener('click', () => {
+        const delBtn = document.createElement('button');
+        delBtn.textContent = '削除';
+        delBtn.classList.add('delete-btn');
+        delBtn.addEventListener('click', () => {
           // remove this entry from addedData by matching unique properties
           const idx = addedData.findIndex(e =>
             e.name === entry.name && e.ing === entry.ing && e.amount === entry.amount && e.level === entry.level
             && e.help_speed === entry.help_speed && e.ing_percent === entry.ing_percent
           );
-          if (idx > -1) {
-            addedData.splice(idx, 1);
-          }
-          // persist updated storage
+          if (idx > -1) addedData.splice(idx, 1);
           localStorage.setItem('addedPokemon', JSON.stringify(addedData));
-          // re-merge data and refresh
           pokemonData = originalData.concat(addedData);
           applyFilter();
         });
-        tdOp.append(editBtnRow, delBtnRow);
+        tdOp.append(delBtn);
       }
       tr.appendChild(tdOp);
       tableBody.appendChild(tr);
@@ -374,7 +382,9 @@ document.addEventListener('DOMContentLoaded', () => {
    closeBtn.addEventListener('click', hideModal);
    modal.addEventListener('click', e => { if (e.target === modal) hideModal(); });
    saveBtn.addEventListener('click', () => {
+     // build new entry and mark as non-original
      const entry = {
+        _orig: false,
         name: formName.value,
         ing: formIng.value,
         amount: formAmount.value,

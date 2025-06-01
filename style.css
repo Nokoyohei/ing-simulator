@@ -127,3 +127,44 @@ input:focus, select:focus {
 #add-btn:hover {
   background-color: #1976D2;
 }
+
+/* Table action buttons */
+.dup-btn, .edit-btn {
+  padding: 4px 8px;
+  margin: 0 2px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.dup-btn:hover, .edit-btn:hover {
+  background-color: #1976D2;
+}
+.delete-btn {
+  padding: 4px 8px;
+  margin: 0 2px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background-color: #e53935;
+}
+
+/* Override odd-row striping for new entries */
+tbody tr.new-entry {
+  background-color: #e8f5e9 !important;
+}
+
+/* Alternate stripes for new-entry rows */
+tbody tr.new-entry:nth-child(odd) {
+  background-color: #e8f5e9 !important;
+}
+tbody tr.new-entry:nth-child(even) {
+  background-color: #d5f7d6 !important;
+}
