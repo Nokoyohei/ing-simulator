@@ -1,81 +1,100 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Pokemon Data Table</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Pokemon Data Table</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Pokemon Data</h1>
-  <button id="add-btn">ポケモンを追加</button>
-  <div class="controls">
-    <label for="search-input">名前で検索: </label>
-    <input type="text" id="search-input" placeholder="名前を入力">
-    <label for="search-dropdown">プルダウン検索(名前): </label>
-    <select id="search-dropdown">
-      <option value="">-- 全て --</option>
-    </select>
-    <label for="search-ing-input">食材で検索: </label>
-    <input type="text" id="search-ing-input" placeholder="食材を入力">
-    <label for="search-ing-dropdown">プルダウン検索(食材): </label>
-    <select id="search-ing-dropdown">
-      <option value="">-- 全て --</option>
-    </select>
-    <label><input type="checkbox" id="ticket-checkbox" checked> キャンチケ</label>
-    <label for="otebo-dropdown">おてぼ: </label>
-    <select id="otebo-dropdown">
-      <option value="0">0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4" selected>4</option>
-    </select>
-  </div>
-  <!-- Add Modal -->
-  <div id="add-modal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>ポケモンを追加</h2>
-      <form id="add-form">
-        <label>名前
-          <input list="form-name-list" id="form-name" placeholder="名前を入力">
-          <datalist id="form-name-list"></datalist>
-        </label>
-        <label>食材<select id="form-ing"></select></label>
-        <label>数量<select id="form-amount"></select></label>
-        <label>レベル<select id="form-level">
-          <option value="30">30</option>
-          <option value="50">50</option>
-          <option value="60">60</option>
-        </select></label>
-        <label>食材率(%)<input type="number" step="0.1" id="form-ing_percent"></label>
-        <label>お手スピ<input type="number" id="form-help_speed"></label>
-        <label><input type="checkbox" id="form-otebo"> おてぼ</label>
-        <label><input type="checkbox" id="form-spM"> スピM</label>
-        <label><input type="checkbox" id="form-spS"> スピS</label>
-        <label><input type="checkbox" id="form-ingS"> 食S</label>
-        <label><input type="checkbox" id="form-ingM"> 食M</label>
-        <label>性格<select id="form-nature">
-          <option value="">-</option>
-          <option value="sp_up">スピ↑</option>
-          <option value="ing_up">食↑</option>
-         <option value="ijippari">いじっぱり</option>
-         <option value="hikaeme">ひかえめ</option>
-        </select></label>
-        <button type="button" id="save-btn">保存</button>
-      </form>
+    <h1>Pokemon Data</h1>
+    <button id="add-btn">ポケモンを追加</button>
+    <div class="controls">
+        <label for="search-input">名前で検索: </label>
+        <input type="text" id="search-input" placeholder="名前を入力">
+        <label for="search-dropdown">プルダウン検索(名前): </label>
+        <select id="search-dropdown">
+            <option value="">-- 全て --</option>
+        </select>
+        <label for="search-ing-input">食材で検索: </label>
+        <input type="text" id="search-ing-input" placeholder="食材を入力">
+        <label for="search-ing-dropdown">プルダウン検索(食材): </label>
+        <select id="search-ing-dropdown">
+            <option value="">-- 全て --</option>
+        </select>
+        <label><input type="checkbox" id="ticket-checkbox" checked> キャンチケ</label>
+        <label for="otebo-dropdown">おてぼ: </label>
+        <select id="otebo-dropdown">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+        </select>
     </div>
-  </div>
-  <table id="pokemon-table" border="1">
-    <thead>
-      <tr>
-        <th>名前</th><th>食材</th><th>数</th><th>レベル</th><th>お手スピ</th><th>％</th>
-        <th>おてぼ</th><th>スピM</th><th>スピS</th><th>食S</th><th>食M</th><th>性格</th>
-        <th>平均入れ替え回数</th><th>実お手スピ</th><th>実質お手スピ<br>(入れ替え込み)</th><th>1時間での取得個数</th><th>操作</th>
-      </tr>
-    </thead>
-    <tbody id="pokemon-table-body"></tbody>
-  </table>
-  <script src="script.js" defer></script>
+    <!-- Add Modal -->
+    <div id="add-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ポケモンを追加</h2>
+            <form id="add-form">
+                <label>名前
+                    <input list="form-name-list" id="form-name" placeholder="名前を入力">
+                    <datalist id="form-name-list"></datalist>
+                </label>
+                <label>食材<select id="form-ing"></select></label>
+                <label>数量<select id="form-amount"></select></label>
+                <label>レベル<select id="form-level">
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                        <option value="60">60</option>
+                    </select></label>
+                <label>食材率(%)<input type="number" step="0.1" id="form-ing_percent"></label>
+                <label>お手スピ<input type="number" id="form-help_speed"></label>
+                <label><input type="checkbox" id="form-otebo"> おてぼ</label>
+                <label><input type="checkbox" id="form-spM"> スピM</label>
+                <label><input type="checkbox" id="form-spS"> スピS</label>
+                <label><input type="checkbox" id="form-ingS"> 食S</label>
+                <label><input type="checkbox" id="form-ingM"> 食M</label>
+                <label>性格<select id="form-nature">
+                        <option value="">-</option>
+                        <option value="sp_up">スピ↑</option>
+                        <option value="ing_up">食↑</option>
+                        <option value="ijippari">いじっぱり</option>
+                        <option value="hikaeme">ひかえめ</option>
+                        <option value="sp_down">スピ↓</option>
+                        <option value="ing_down">食↓</option>
+                    </select></label>
+                <button type="button" id="save-btn">保存</button>
+            </form>
+        </div>
+    </div>
+    <table id="pokemon-table" border="1">
+        <thead>
+            <tr>
+                <th>名前</th>
+                <th>食材</th>
+                <th>数</th>
+                <th>レベル</th>
+                <th>お手スピ</th>
+                <th>％</th>
+                <th>おてぼ</th>
+                <th>スピM</th>
+                <th>スピS</th>
+                <th>食S</th>
+                <th>食M</th>
+                <th>性格</th>
+                <th>平均入れ替え回数</th>
+                <th>実お手スピ</th>
+                <th>実質お手スピ<br>(入れ替え込み)</th>
+                <th>1時間での取得個数</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="pokemon-table-body"></tbody>
+    </table>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
