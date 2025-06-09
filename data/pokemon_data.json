@@ -1230,5 +1230,45 @@
         "level": "30",
         "help_speed": "2400",
         "ing_percent": "20"
+    },
+    {
+        "name": "クチート",
+        "ing": "ピュアなオイル",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3200",
+        "ing_percent": "20.4"
+    },
+    {
+        "name": "クチート",
+        "ing": "ワカクサコーン",
+        "amount": "4",
+        "level": "30",
+        "help_speed": "3200",
+        "ing_percent": "20.4"
+    },
+    {
+        "name": "クチート",
+        "ing": "ピュアなオイル",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3200",
+        "ing_percent": "20.4"
+    },
+    {
+        "name": "クチート",
+        "ing": "ワカクサコーン",
+        "amount": "6",
+        "level": "60",
+        "help_speed": "3200",
+        "ing_percent": "20.4"
+    },
+    {
+        "name": "クチート",
+        "ing": "あんみんトマト",
+        "amount": "8",
+        "level": "60",
+        "help_speed": "3200",
+        "ing_percent": "20.4"
     }
 ]
