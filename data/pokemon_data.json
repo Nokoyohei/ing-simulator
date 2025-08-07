@@ -524,7 +524,7 @@
         "ing": "ワカクサ大豆",
         "amount": "8",
         "level": "60",
-        "help_speed": "2800",
+        "help_speed": "2650",
         "ing_percent": "19"
     },
     {
@@ -532,7 +532,7 @@
         "ing": "あんみんトマト",
         "amount": "7",
         "level": "60",
-        "help_speed": "2800",
+        "help_speed": "2650",
         "ing_percent": "19"
     },
     {
@@ -540,7 +540,7 @@
         "ing": "あんみんトマト",
         "amount": "5",
         "level": "30",
-        "help_speed": "2800",
+        "help_speed": "2650",
         "ing_percent": "19"
     },
     {
@@ -548,7 +548,7 @@
         "ing": "ふといながねぎ",
         "amount": "4",
         "level": "60",
-        "help_speed": "2800",
+        "help_speed": "2650",
         "ing_percent": "19"
     },
     {
@@ -556,7 +556,7 @@
         "ing": "ふといながねぎ",
         "amount": "3",
         "level": "30",
-        "help_speed": "2800",
+        "help_speed": "2650",
         "ing_percent": "19"
     },
     {
