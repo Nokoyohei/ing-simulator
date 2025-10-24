@@ -1310,5 +1310,45 @@
         "level": "60",
         "help_speed": "3000",
         "ing_percent": "16.0"
+    },
+    {
+        "name": "パンプジン(こだま)",
+        "ing": "ずっしりカボチャ",
+        "amount": "5",
+        "level": "30",
+        "help_speed": "3300",
+        "ing_percent": "13.0"
+    },
+    {
+        "name": "パンプジン(こだま)",
+        "ing": "ずっしりカボチャ",
+        "amount": "7",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "13.0"
+    },
+    {
+        "name": "パンプジン(こだま)",
+        "ing": "ワカクサ大豆",
+        "amount": "11",
+        "level": "30",
+        "help_speed": "3300",
+        "ing_percent": "13.0"
+    },
+    {
+        "name": "パンプジン(こだま)",
+        "ing": "ワカクサ大豆",
+        "amount": "18",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "13.0"
+    },
+    {
+        "name": "パンプジン(こだま)",
+        "ing": "ほっこりポテト",
+        "amount": "15",
+        "level": "60",
+        "help_speed": "3300",
+        "ing_percent": "13.0"
     }
 ]

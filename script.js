@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tdRaw.textContent = !isNaN(actual) ? actual.toFixed(2) : '';
             tr.appendChild(tdRaw);
 
-            actual = actual + 5 * avgSwapCount; // add 5 seconds for each average swap count
+            actual = actual + 0.5 * avgSwapCount; // add 5 seconds for each average swap count
             // append effective support speed
             const tdActual = document.createElement('td');
             tdActual.textContent = !isNaN(actual) ? actual.toFixed(2) : '';
@@ -353,9 +353,9 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(new Set(originalData.map(e => e.ing))).sort().forEach(ing => {
             const opt = document.createElement('option'); opt.value = ing; opt.textContent = ing; formIng.appendChild(opt);
         });
-        // populate amount select with fixed range 2-15
+        // populate amount select with fixed range 2-30
         formAmount.innerHTML = '<option value="">-- 選択 --</option>';
-        for (let i = 2; i <= 15; i++) {
+        for (let i = 2; i <= 30; i++) {
             const opt = document.createElement('option'); opt.value = i; opt.textContent = i; formAmount.appendChild(opt);
         }
         // clear input value
